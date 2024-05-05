@@ -1,13 +1,12 @@
 **GuitarGainz**
 ================
-![Image Alt Text](/assets/guitargainz.jpg)
-
+![Image Alt Text](/assets/GuitarGainzBanner.png)
 Welcome to GuitarGainz, an open-source project aimed at visualizing guitar pedals and the legendary artists who have used them to create iconic sounds.
 
 **What is GuitarGainz?**
 ------------------------
 
-GuitarGainz is a comprehensive web application built using ASP.NET Core, and EF Core. Our goal is to provide a platform for users to explore, discover, and celebrate the guitar pedals that have been used by their favorite artists in memorable performances.
+GuitarGainz is a comprehensive web application built using Blazor WebAssembly. Our goal is to provide a platform for users to explore, discover, and celebrate the guitar pedals that have been used by their favorite artists in memorable performances.
 
 **Key Features:**
 

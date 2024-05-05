@@ -1,0 +1,41 @@
+﻿@page "/"
+@using pedals_ui.Services;
+@using pedals_ui.Models;
+@inject ICategoryService CategoryService;
+
+<PageTitle>GuitarGainz</PageTitle>
+
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="home/GuitarGainzBanner.png" class="d-block w-100" height="720" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="home/GuitarGainzBanner.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="home/GuitarGainzBanner.png" class="d-block w-100" alt="...">
+        </div>
+    </div>
+</div>
+@if(categories?.Count > 0)
+{
+<ul class="nav nav-pills nav-fill">
+    @foreach (var category in categories)
+    {
+        <li class="nav-item">
+            <a class="nav-link active" href="#">@category.Name</a>
+        </li>
+    }
+
+</ul>
+}
+@code {
+    private List<Category> categories=new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        categories = await CategoryService.GetCategories();
+    }
+}
